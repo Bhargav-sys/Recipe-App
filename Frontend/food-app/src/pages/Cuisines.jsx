@@ -36,7 +36,7 @@ const handleCuisineClick = (cuisine) => {
                         <p className="content-of-cui" style={{color: 'white'}}>
                           Explore the World ...
                           <br />
-                          Cuisines
+                          Cuisines Available
                         </p>
                         <div className='cuis-cont'>
                             {["Italian","Indian", "French", "American", "Chinese", "Thai"].map((cuisine)=>{
