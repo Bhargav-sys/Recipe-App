@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Kalnia+Glaze:wght@423&family=Pacifico&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.button
+{
+  text-decoration: none;
+  color: #282c34;
+}
+
+.nav-item
+{
+  color:pink;
+}
+.nav-link.active {
+  background-color: #262626;
+  transition: all 1ms ease-in-out;
+}
+.nav-link.active:hover {
+  background-color: #404040; /* Darker shade */
+  transform: scale(1); /* Slight pop-out effect */
+  border-bottom:2px solid #61dafb;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.content
+{
+  animation: content-entry 1s ease-out;
+  margin-top: 100px;
+  font-family: "Moirai One", serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 90px;
+  letter-spacing: 2.7px;
+  text-align:right;
+  margin-right: 30px;
+  color: gray;
+}
+
+.content-of-fav
+{
+  animation: content-entry 1s ease-out;
+  margin-top: 100px;
+  font-family: "Moirai One", serif;
+  font-size: 90px;
+  text-align:left;
+  margin-left: 30px
+
+}
+
+@keyframes content-entry {
+    0%{
+      transform: translateX(-150px);
+    }
+
+    100%{
+      transform: translateX(0px);
+    }
+}
+
+
+
+
+.bigi
+{
+  background-image: linear-gradient(black,rgb(27, 27, 27));
+  
+}
+
+
+
+
+@keyframes enter {
+  0%{
+    transform:translateX(-350px) scale(0.25);
+    
+  }
+  100%{
+    transform:translateX(0px) scale(1);
+  }
+}
+
+.image-1
+{
+  animation: enter-1 5s ease-out forwards;
+  animation-timeline: view();
+  animation-fill-mode: forwards;
+  animation-range: entry 0 cover 70%;
+  z-index: 2;
+  position: relative;
+}
+
+@keyframes enter-1 {
+  0%{
+    transform:translateX(-700px) scale(0.25);
+    
+  }
+  100%{
+    transform:translateX(0px) scale(1);
+  }
+}
+
+.image-2
+{
+  animation: enter 5s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+  z-index: 1;
+  position: relative;
+}
+
+.image-3
+{
+  animation: enter-3 5s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 70%;
+  z-index: 1;
+  position: relative;
+}
+
+@keyframes enter-3 {
+  0%{
+    transform:translateX(150px) scale(0.25);
+    
+  }
+  100%{
+    transform:translateX(0px) scale(1);
+  }
+}
+.image-4
+{
+  animation: enter-3 5s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+  z-index: 1;
+  position: relative;
+}
+
+.img-cont
+{
+  overflow:visible;
+}
+
+
+.cont
+{
+  display: flex;
+  height: 667px;
+  width: 100vw;
+  max-width: 100;
+  background-color: black;
+  /* margin:0px 0px; */
+  /* padding: 0px 0px; */
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+ 
+}
+
+
+
+#login
+{
+  animation: content-entry 1s ease-out; 
+  height: 400px;
+  width: 500px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  
+}
+
+#login_header
+{
+  margin-top: 40px;
+  margin-bottom: 25px;
+  font-family: "Moirai One", serif;
+  font-size: 45px;
+  color: azure;
+}
+
+::placeholder
+{
+  color: aliceblue
+}
+
+input[type=email]
+{
+  margin-bottom: 25px;
+  width: 350px;
+  border-radius: 5px;
+  height: 45px;
+  border-bottom: #fcff54;
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  padding-left: 15px;
+  color: azure;
+}
+
+
+
+
+
+input[type=password]
+{
+  margin-bottom: 25px;
+  width: 350px;
+  border-radius: 5px;
+  height: 45px;
+  border-bottom: #fcff54;
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  padding-left: 15px;
+  color: azure;
+}
+
+#loginBtn
+{
+  border-radius: 3px;
+  width: 19%;
+  height: 10%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+.recipe
+{
+  background: black;
+}
+
+
+.card-container
+{
+  display: flex;
+  flex-wrap: wrap;
+  background-image: linear-gradient(rgba(27, 27, 27), black);
+  justify-content: space-evenly;
+  align-self:flex-end;
+  gap: 30px;
+  
+
+}
+.card-items
+{
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 1px;
+  border-color: rgb(0, 0, 0);
+  height: 300px;
+  width: 80px;
+  background-color: rgb(101, 101, 101);
+  margin: 0 15px;
+  flex: 0 1 25%;
+  overflow: hidden;
+  padding-bottom: 5px;
+  box-shadow: 2px 4px 5px 0 rgba(27, 27, 27, 0.2), 0 6px 20px 0 rgb(13, 13, 13);
+  transition: box-shadow 0.5s;
+  opacity: 0.95;
+  margin-bottom: 25px;
+  margin-top: 45px;
+
+}
+
+.card-items:hover{
+  box-shadow: 2px 4px 5px 1px rgba(245, 245, 159, 0.2), 0 6px 20px 0 rgba(214, 186, 2, 0.289);
+  opacity: 1;
+}
+.title
+{
+  margin-top: 5px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: azure;
+  font-size: 20px; 
+  text-align: center;
+}
+
+.card-body .icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: -60px;
+  color: white;
+  overflow: hidden;
+}
+
+.card-body .timer{
+  display: flex;
+  align-items: center;
+  gap:5px;
+  font-size: 13px;
+}
+
+
+.outerForm
+{
+  background-color: black;
+}
+
+
+
+.mFormCont
+{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.recipeList {
+  display: flex;
+  flex-wrap: wrap;  /* Allows wrapping to the next line */
+  justify-content: space-between; /* Ensures spacing between items */
+  gap: 20px; /* Adds spacing between cards */
+  padding: 20px;
+  background-image: linear-gradient(black ,rgb(30, 30, 30));
+  /* background-color: black; */
+}
+
+.recipeCard {
+  flex: 0 1 calc(25% - 20px); /* Ensures 4 cards per row with spacing */
+  background-color: rgb(58, 58, 58);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+
+
+.cuis-cont
+{
+  display: flex;
+  gap: 140px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width:100%;
+  /* height: 100%; */
+  min-height: 100vh;
+
+}
+
+.cuis-item
+{
+ 
+  height: 300px;
+  width: 700px;
+  border: #61dafb solid 2px;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 24px;
+  
+  padding: 16px;
+  cursor: pointer;
+  /* margin-top: 150px;
+  margin-bottom: -150px;
+  */
+  overflow:hidden ;
+  display:flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  animation: cuisine-entry linear; 
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+  background-color: #2a2a2b;
+}
+
+.cuis-item:hover{
+  box-shadow: 1px 1px 7px 1px rgba(249, 251, 198, 0.7);
+ 
+}
+
+@keyframes cuisine-entry {
+  from{
+    opacity: 0;
+    scale: 0.5;
+    filter: blur(2px);
+  }
+
+  to{
+    opacity: 1;
+    scale: 1;
+    filter: blur(0px);
+
+  }
+}
+
+.content-of-cui
+{
+  
+  margin-top: 100px;
+  font-family: "Moirai One", serif;
+  font-size: 90px;
+  text-align:left;
+  margin-left: 30px;
+  margin-bottom: 600px;
+  animation: content-entry 1s ease-out;
+  letter-spacing: 3px;
+}
+
+
+
+.cuisine-img {
+  width: 400px;
+  height: 250px; /* Adjust image height */
+  object-fit: cover; /* Ensures the image fits properly */
+  border-radius: 12px;
+}
+
+
+.cuis-item p {
+  display: flex;
+  color: white;
+  font-size: 50px;
+  margin-top: 100px;
+  text-align: right;
+  font-family: "Moirai One", serif;
+  margin-right: 15px;
+  margin-left: 5px;
+}
+.recipe-list
+{
+  background-color: #dadcdf;
+  height: 100vh;
+  justify-content: center;
+}
+
+.recipe-card
+{
+  margin-top: 100px;
+  width: 250px;
+  height: 500px;
+  padding-left: 15px;
+}
+
+.cuisine-name
+{
+  font-family: "Moirai One", serif;
+  font-size: 50px;
+  color: aliceblue;
+  margin-bottom: 50px;
+}
