@@ -15,6 +15,8 @@
 {
   text-decoration: none;
   color: #282c34;
+  text-align: center;
+  
 }
 
 .nav-item
@@ -24,11 +26,13 @@
 .nav-link.active {
   background-color: #262626;
   transition: all 1ms ease-in-out;
+  border-bottom:2px solid #40404000;
 }
 .nav-link.active:hover {
   background-color: #404040; /* Darker shade */
   transform: scale(1); /* Slight pop-out effect */
   border-bottom:2px solid #61dafb;
+  transition-delay: 10ms;
 }
 
 .App-header {
@@ -67,7 +71,7 @@
   letter-spacing: 2.7px;
   text-align:right;
   margin-right: 30px;
-  color: gray;
+  color: azure;
 }
 
 .content-of-fav
@@ -180,14 +184,15 @@
   display: flex;
   height: 667px;
   width: 100vw;
-  max-width: 100;
+  max-width: 100%;
   background-color: black;
   /* margin:0px 0px; */
   /* padding: 0px 0px; */
   justify-content: center;
   align-items: center;
   align-content: center;
- 
+  overflow-y:auto;
+  margin-top: 0px;
 }
 
 
@@ -204,8 +209,6 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-
-  
 }
 
 #login_header
@@ -493,4 +496,143 @@ input[type=password]
   font-size: 50px;
   color: aliceblue;
   margin-bottom: 50px;
+}
+
+
+.modal {
+  position: fixed;
+  top: 34%;
+  left: 30%;
+  z-index: 100; /* Ensure it's above the backdrop */
+  padding: 2rem;
+  border-radius: 6px;
+  border: none;
+  width: 40%;
+  background-color: rgba(50, 50, 50, 0.95); /* Ensure visibility */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backdrop{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 9;
+}
+
+.share-btn
+{
+  color: yellow;
+  margin-left: 45%;
+  border-radius: 4px;
+  background-color: #404040;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.form{
+  margin-top: 100px;
+  width: 75%;
+}
+
+.form-control
+{
+  margin-bottom: 25px;
+  height: 70px;
+}
+.fip [type=text]{
+  width: 75%;
+  height: 35px;
+  margin-left: 25px;
+  margin-top: 25px;
+  margin-bottom: 300px;
+}
+
+
+.rform{
+  padding-top: 50px;
+}
+
+.fta
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+#recipe-form
+{
+  animation: content-entry 1s ease-out; 
+  height: 100%;
+  width: 700px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+#loginBtn2
+{
+  border-radius: 3px;
+  width: 19%;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+input[type=text]
+{
+  margin-top: 15px;
+  margin-bottom: 25px;
+  width: 500px;
+  border-radius: 5px;
+  height: 50px;
+  border-bottom: #fcff54;
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  padding-left: 10px;
+  padding-bottom: 15px;
+  color: azure;
+  text-align: left;
+}
+
+textarea
+{
+  margin-bottom: 40px;
+  width: 500px;
+  border-radius: 5px;
+  height: 50px;
+  border-bottom: #fcff54;
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  padding-left: 10px;
+  padding-bottom: 15px;
+  color: azure;
+  text-align: left;
+  
 }

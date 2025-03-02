@@ -10,6 +10,7 @@ import Cuisines from "./pages/Cuisines";
 import CRecipes from "./pages/CRecipes";
 
 import axios from 'axios'
+import AddFoodRecipes from "./pages/AddFoodRecipes";
 
 const getAllRecipes=async()=>{
   let allRecipes=[]
@@ -21,14 +22,25 @@ const getAllRecipes=async()=>{
 
 // , loader: getAllRecipes
 
+const getMyRecipe=async()=>{
+   let user=JSON.parse(localStorage.getItem("user"))
+   let allRecipes=await getAllRecipes()
+   return allRecipes.filter(item=>item.createdBy===user._id)
+}
+
 
 const router=createBrowserRouter([
-  {path:'/',element:<Home2/>},
+  {path:'/',element:<Home2/>, loader: getAllRecipes},
   {path:'/login',element: <Login/>},
+  // {path:'/register',element: <Login/>},
+  {path:'/myrecipe',element: <Home2/>,loader:getMyRecipe},
   {path:'/foodmagic',element: <FoodMagic/>},
-  {path:'/favourites',element: <Favourites/>},
+  {path:'/favourites',element: <Home2/>},
   {path:'/cuisines',element: <Cuisines/>},
-  {path:'/recipes',element: <CRecipes/>}
+  {path:'/recipes',element: <CRecipes/>},
+  {path:'/addRecipe',element: <AddFoodRecipes/>}
+  
+
   
   
   // {path:'/myrecipe',element: <MyRecipe/>}

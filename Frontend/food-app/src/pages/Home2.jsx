@@ -2,8 +2,21 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import '../App.css'
 import RecipeItems from '../components/RecipeItems'
+import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 
 export default function Home2() {
+  const navigate=useNavigate()
+  const [isOpen,setIsOpen]=useState(false)
+  const addRecipe=()=>{
+    let token=localStorage.getItem('token')
+    if(token)
+    navigate('/addRecipe')
+  else{
+    setIsOpen(true)
+    navigate('/login')
+  }
+  }
   return (
     <>
     <div style={{backgroundColor: "black", height: "100%vh"}}>
@@ -19,12 +32,12 @@ export default function Home2() {
           <img className='image-4' src="noodles.png" alt="" height={"200px"} style={{marginTop: "-820px", marginLeft:"190px"}} />
         </div>
         
-        
+        <button className='share-btn' onClick={addRecipe}>Share Your Recipe</button>
       </div>
     </div>
       <div className='recipe' style={{height:'100vh'}}>
         <RecipeItems/>
-        <p className="content" style={{color: 'white'}}>Recipes will be displayed here after backend Integration</p>
+        {/* <p className="content" style={{color: 'white'}}>Recipes will be displayed here after backend Integration</p> */}
       </div>
       </>
   )

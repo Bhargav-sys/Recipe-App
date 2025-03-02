@@ -14,7 +14,7 @@ function RecipeItems() {
             allRecipes?.map((item,index)=>{
               return(
                 <div key={index} className='card-items'>
-                  <img src={foodImg} width="100%" height="250px" />  
+                  <img src={`http://localhost:5000/images/${item.coverImage}`} width="100%" height="250px" />  
                   <div className="card-body">
                   <div className="title">{item.title}</div>
                   <div className="icons" >
