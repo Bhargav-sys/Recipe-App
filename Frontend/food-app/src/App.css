@@ -477,7 +477,7 @@ input[type=password]
 }
 .recipe-list
 {
-  background-color: #dadcdf;
+  background-color:#2a2a2b;
   height: 100vh;
   justify-content: center;
 }
@@ -485,9 +485,11 @@ input[type=password]
 .recipe-card
 {
   margin-top: 100px;
-  width: 250px;
-  height: 500px;
+  width: 500px;
+  height: 600px;
   padding-left: 15px;
+  color:#e7e1e1;
+  background-color: #404040;
 }
 
 .cuisine-name
@@ -499,21 +501,6 @@ input[type=password]
 }
 
 
-.modal {
-  position: fixed;
-  top: 34%;
-  left: 30%;
-  z-index: 100; /* Ensure it's above the backdrop */
-  padding: 2rem;
-  border-radius: 6px;
-  border: none;
-  width: 40%;
-  background-color: rgba(50, 50, 50, 0.95); /* Ensure visibility */
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .backdrop{
   position: fixed;
@@ -636,3 +623,34 @@ textarea
   text-align: left;
   
 }
+
+.outer-container{
+  width: 110%;
+  background-color: #2a2a2b ;
+  /* color: #fcff54; */
+  padding-top: 10px;
+  margin-top: 20px;
+  border-radius: 0.8cm;
+}
+
+.outer-container .profile{
+  display: flex;
+  gap:1rem;
+  align-items: center;
+  color: #494949;
+  
+}
+
+.outer-container .title{
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+
+.outer-container .recipe-details{
+  display: flex;
+  gap: 3rem;
+  align-items: justify;
+  margin-top: 1rem;
+  color: #dadcdf;
+}
+

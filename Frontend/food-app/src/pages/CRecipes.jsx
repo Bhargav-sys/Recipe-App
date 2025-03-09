@@ -30,7 +30,7 @@ export default function CRecipes() {
             
                 <div className="recipe-list" style={{ display: 'flex', gap: '20px', marginTop: '-120px',width:'1519px' }}>
                     {recipes.map((recipe) => (
-                    <div key={recipe._id} className="recipe-card" style={{ border: '1px solid #ddd', padding: '15px', borderRadius: '10px', backgroundColor: '#fff' }}>
+                    <div key={recipe._id} className="recipe-card" style={{ border: '1px solid #ddd', padding: '15px', borderRadius: '10px' }}>
                         <h3>{recipe.title}</h3>
                         {/* <p><strong>Ingredients:</strong> {recipe.ingredients}</p> */}
                         <p><strong>Ingredients:</strong> {recipe.ingredients.join(", ")}</p>

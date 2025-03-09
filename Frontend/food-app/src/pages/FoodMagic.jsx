@@ -29,7 +29,7 @@ function FoodMagic() {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const API_KEY = "API_KEY"; 
+  const API_KEY = "88744aec8c624aca8c949b7e464f69e8"; 
   const API_URL = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&number=5&apiKey=${API_KEY}`;
 
   const fetchRecipes = async () => {
